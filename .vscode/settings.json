@@ -71,6 +71,7 @@
         "string_view": "cpp"
     },
     "cSpell.words": [
-        "MAXN"
+        "MAXN",
+        "stps"
     ]
 }
