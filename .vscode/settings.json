@@ -68,10 +68,15 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "stacktrace": "cpp"
     },
     "cSpell.words": [
+        "dpth",
         "MAXN",
+        "prufer",
         "stps"
     ]
 }
