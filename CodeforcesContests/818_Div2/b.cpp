@@ -23,25 +23,30 @@ const int MAXN = 3e5;
 
 int main(){
     FIN;
+    vector<int> mp;
     int t;cin>>t;
     while(t--){
-        //Make two pair arrays
-        //Sort them ask for the head to see which one is bigger
+        int n,k,r,c;cin>>n>>k>>r>>c;r--;c--;
+        vector<vector<char>> mt(n,vector<char>(n,'.'));
+        int rr = r%k;
+        int cc = c%k;
 
-        ll n;cin>>n;
-        ll mn = 1e9;
-        ll a[n];fore(i,0,n){
-            cin>>a[i];
-            mn = min(a[i],mn);
-        }
-        int stps = 0;
         fore(i,0,n){
-            if(a[i]!=mn){
-                stps += (a[i]/((mn*2)-1));
-                if(a[i]%((mn*2)-1) == 0)stps--;
+            fore(j,0,n){
+                if(((j+rr)%k) == ((i+cc)%k)){
+                    mt[i][j] = 'X';
+                }
             }
         }
-        cout<<stps<<"\n";
+
+        mt[r][c] = 'X';
+        
+        fore(i,0,n){
+            fore(j,0,n){
+                cout<<mt[i][j];
+            }
+            cout<<"\n";
+        }
     }
 
 }
